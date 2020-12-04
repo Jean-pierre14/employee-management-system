@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    position: relative;
+    background-color: rgba(240, 240, 240, 0.808);
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    transition: all ease 0.3s;
+    overflow: hidden;
+}
+.box:hover{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(88, 150, 106);
+    z-index: 0;
+}
