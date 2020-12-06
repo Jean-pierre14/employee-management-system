@@ -83,7 +83,7 @@ if (!isset($_SESSION["email"])) {
 
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="logout.php">LogOut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,7 +108,6 @@ if (!isset($_SESSION["email"])) {
                     <h2 class="title">Assign Project</h2>
                     <form action="process/assignp.php" method="POST" enctype="multipart/form-data">
                         <table border="0">
-
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="Employee ID" name="eid"
                                     required="required">

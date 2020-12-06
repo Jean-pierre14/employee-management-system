@@ -1,4 +1,3 @@
-
 <?php
 require_once ('process/dbh.php');
 $id = $_GET['id'];
@@ -21,6 +20,6 @@ while($row=mysqli_fetch_array($sql))
 <?php
 //insert into former imployees
 
-$insert = mysqli_query("INSERT INTO former_employees VALUES('$fname','$lname','$gender','$contact','$nid','$department') VALUES('firstName','lastName','gender','contact','nid','department')") or die(mysqli_error($conn));
+$insert = mysqli_query($conn,"INSERT INTO former_employees VALUES('$fname','$lname','$gender','$contact','$nid','$department') VALUES('firstName','lastName','gender','contact','nid','department')") or die(mysqli_error($conn));
 include('delete.php');
 ?>

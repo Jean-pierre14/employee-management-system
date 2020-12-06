@@ -29,8 +29,6 @@ if(isset($_POST['update']))
     window.location.href='javascript:history.go(-1)';
     </SCRIPT>");
         }
-
-  
 }
 ?>
 

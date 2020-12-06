@@ -83,7 +83,7 @@ if (!isset($_SESSION["email"])) {
 
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="logout.php">LogOut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
                     </ul>
                 </div>
             </div>

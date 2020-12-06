@@ -1,7 +1,4 @@
-
-
 <?php require_once 'process/dbh.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en"><!-- Basic -->
 <head>
@@ -66,7 +63,7 @@
                 
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="logout.php">LogOut</a></li>
+            <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
           </ul>
         </div>
       </div>

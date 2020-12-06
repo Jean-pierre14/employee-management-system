@@ -105,7 +105,7 @@ $result = mysqli_query($conn, $sql);
                                 Leave</a></li>
 
 
-                        <li class="nav-item"><a class="nav-link" href="elogin.html">LogOut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
                     </ul>
                 </div>
             </div>

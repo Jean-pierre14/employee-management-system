@@ -78,9 +78,7 @@
                                 Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="applyleave.php?id=<?php echo $id?>">Apply
                                 Leave</a></li>
-
-
-                        <li class="nav-item"><a class="nav-link" href="elogin.html">LogOut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
                     </ul>
                 </div>
             </div>
