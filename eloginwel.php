@@ -1,5 +1,9 @@
 <?php 
-	$id = (isset($_GET['id']) ? $_GET['id'] : '');
+    $id = (isset($_GET['id']) ? $_GET['id'] : '');
+    
+    if(!$_GET['id']){
+        header('Location: elogin.html');
+    }
 	require_once ('process/dbh.php');
 	$sql1 = "SELECT * FROM `employee` where id = '$id'";
 	$result1 = mysqli_query($conn, $sql1);
@@ -218,26 +222,26 @@ $result3 = mysqli_query($conn, $sql3);
                                         <th>Status</th>
                                     </tr>
                                 </thead>
+                                <?php if(@mysqli_num_rows($result2) > 0):?>
                                 <?php
-				while ($employee = mysqli_fetch_assoc($result2)) {
-					$date1 = new DateTime($employee['start']);
-					$date2 = new DateTime($employee['end']);
-					$interval = $date1->diff($date2);
-					$interval = $date1->diff($date2);
+                                        while ($employee = mysqli_fetch_assoc($result2)) {
+                                            $date1 = new DateTime($employee['start']);
+                                            $date2 = new DateTime($employee['end']);
+                                            $interval = $date1->diff($date2);
+                                            $interval = $date1->diff($date2);
 
-					echo "<tr>";
-					
-					
-					echo "<td>".$employee['start']."</td>";
-					echo "<td>".$employee['end']."</td>";
-					echo "<td>".$interval->days."</td>";
-					echo "<td>".$employee['reason']."</td>";
-					echo "<td>".$employee['status']."</td>";
-					
-				}
-
-			?>
-
+                                            echo "<tr>";
+                                            echo "<td>".$employee['start']."</td>";
+                                            echo "<td>".$employee['end']."</td>";
+                                            echo "<td>".$interval->days."</td>";
+                                            echo "<td>".$employee['reason']."</td>";
+                                            echo "<td>".$employee['status']."</td>";
+                                            
+                                        }
+                                    ?>
+                                <?php else:?>
+                                <p class="alert alert-danger">There no data recorded</p>
+                                <?php endif;?>
                             </table>
                         </div>
                     </div>
