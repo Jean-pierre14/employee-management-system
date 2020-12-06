@@ -127,7 +127,6 @@ $result = mysqli_query($conn, $sql);
                                 <th>Options</th>
                             </tr>
                         </thead>
-
                         <?php
                     while ($employee = mysqli_fetch_assoc($result)) {
                       echo "<tr>";

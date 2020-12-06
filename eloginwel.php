@@ -218,9 +218,6 @@ $result3 = mysqli_query($conn, $sql3);
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-
-
-
                                 <?php
 				while ($employee = mysqli_fetch_assoc($result2)) {
 					$date1 = new DateTime($employee['start']);
