@@ -84,7 +84,7 @@ $result = mysqli_query($conn, $sql);
 
 <body>
     <!-- Start header -->
-    <header class="top-navbar">
+    <div class="top-navbar">
         <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -110,7 +110,7 @@ $result = mysqli_query($conn, $sql);
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
 
     <!-- <form id = "registration" action="edit.php" method="POST"> -->
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
@@ -217,15 +217,6 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <!-- Jquery JS-->
-    <!-- <script src="vendor/jquery/jquery.min.js"></script>
-   
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/datepicker/moment.min.js"></script>
-    <script src="vendor/datepicker/daterangepicker.js"></script>
-
-   
-    <script src="js/global.js"></script> -->
     <footer class="footer-area bg-f">
 
         <div class="copyright">

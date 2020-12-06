@@ -100,50 +100,19 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <form action="process/applyleaveprocess.php?id=<?php echo $id?>" method="POST">
-                    <table border="0">
-                        <tr>
-                            <td>Reason</td>
-                            <td><input type="text" name="reason" class="form-control"></td>
-                        </tr>
-                        <tr>
-                            <td>Start date</td>
-                            </td>
-                            <td><input type="date" name="start" class="form-control"></td>
-                        </tr>
-                        <tr>
-                            <td>End date</td>
-                            <td><input type="date" name="end" class="form-control"></td>
-                        </tr>
-
-                        </tr>
-                    </table>
-
-                    <!--
-                        <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Reason" name="reason">
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                            	<p>Start Date</p>
-                                <div class="input-group">
-                                    <input class="input--style-1" type="date" placeholder="start" name="start">
-                                   
-                                </div>
-
-                            </div>
-                            <div class="col-2">
-                            	<p>End Date</p>
-                                <div class="input-group">
-                                    <input class="input--style-1" type="date" placeholder="end" name="end">
-                                   
-                                </div>
-                            </div>
-                        </div> -->
-
-
-
-
+                <form action="process/applyleaveprocess.php?id=<?php echo $id?>" method="POST" style="width: 100%">
+                    <div class="form-group">
+                        <label>Reason</label>
+                        <input type="text" name="reason" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Start date</label>
+                        <input type="date" name="start" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>End date</label>
+                        <input type="date" name="end" class="form-control">
+                    </div>
                     <div class="p-t-20">
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
@@ -151,7 +120,7 @@
             </div>
             <div class="col-md-7">
                 <div class="table-reponsive">
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-sm table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th align="center">Emp. ID</th>
@@ -166,32 +135,22 @@
 
 
                         <?php
-
-
 				$sql = "Select employee.id, employee.firstName, employee.lastName, employee_leave.start, employee_leave.end, employee_leave.reason, employee_leave.status From employee, employee_leave Where employee.id = $id and employee_leave.id = $id order by employee_leave.token";
 				$result = mysqli_query($conn, $sql);
 				while ($employee = mysqli_fetch_assoc($result)) {
 					$date1 = new DateTime($employee['start']);
 					$date2 = new DateTime($employee['end']);
 					$interval = $date1->diff($date2);
-					$interval = $date1->diff($date2);
-
 					echo "<tr>";
 					echo "<td>".$employee['id']."</td>";
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
-					
 					echo "<td>".$employee['start']."</td>";
 					echo "<td>".$employee['end']."</td>";
 					echo "<td>".$interval->days."</td>";
 					echo "<td>".$employee['reason']."</td>";
 					echo "<td>".$employee['status']."</td>";
-					
 				}
-
-
 			?>
-
-
                     </table>
                 </div>
             </div>
