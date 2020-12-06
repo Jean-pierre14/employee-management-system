@@ -1,6 +1,11 @@
 <?php
     include("./process/dbh.php");
     $output = '';
+    session_start();
+    if(isset($_GET['logout'])){
+        session_destroy();
+        header('Location: elogin.html');
+    }
     if(isset($_POST['action'])){
         if($_POST['action'] == 'all'){
             $sql = mysqli_query($conn, "SELECT COUNT(id) AS countItem FROM employee");

@@ -1,9 +1,13 @@
 <?php 
+    session_start();
     $id = (isset($_GET['id']) ? $_GET['id'] : '');
     
     if(!$_GET['id']){
         header('Location: elogin.html');
     }
+    
+    if(!$_SESSION['id']){header("Location: elogin.html");}
+
 	require_once ('process/dbh.php');
 	$sql1 = "SELECT * FROM `employee` where id = '$id'";
 	$result1 = mysqli_query($conn, $sql1);
@@ -63,7 +67,7 @@ $result3 = mysqli_query($conn, $sql3);
 <body>
     <!-- Start header -->
     <header class="top-navbar">
-        <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg p-0 navbar-light bg-white">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logonew.png" alt="" width="200">
@@ -84,7 +88,7 @@ $result3 = mysqli_query($conn, $sql3);
                                 Leave</a></li>
 
 
-                        <li class="nav-item"><a class="nav-link" href="elogin.html">LogOut34</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut34</a></li>
                     </ul>
                 </div>
             </div>
