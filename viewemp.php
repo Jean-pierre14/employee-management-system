@@ -87,7 +87,6 @@ $result = mysqli_query($conn, $sql);
                                 <a class="dropdown-item" href="empleave.php">Employee Leave</a>
                                 <a class="dropdown-item" href="assignproject.php">Project Status</a>
                                 <a class="dropdown-item" href="msg.php">Messages</a>
-
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
@@ -133,7 +132,6 @@ $result = mysqli_query($conn, $sql);
                       echo "<td>".$employee['id']."</td>";
                       echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
                       echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
-                      
                       echo "<td>".$employee['email']."</td>";
                       echo "<td>".$employee['birthday']."</td>";
                       echo "<td>".$employee['gender']."</td>";
@@ -142,10 +140,10 @@ $result = mysqli_query($conn, $sql);
                       echo "<td>".$employee['address']."</td>";
                       echo "<td>".$employee['dept']."</td>";
                       echo "<td>".$employee['degree']."</td>";
-                      echo "<td>".$employee['points']."</td>";
-
-              
-                      echo "<td><div class='btn-group'><a href=\"edit.php?id=$employee[id]\" class='btn btn-sm btn-info'>Edit</a><a href=\"delete.php?id=$employee[id]\" class='btn btn-sm btn-danger' onClick=\"return confirm('Are you sure you want to Remove this person?')\">Delete</a></div></td>";
+                      echo "<td>".$employee['points']."</td>";              
+                      echo "<td><div class='btn-group'>
+                        <a href=\"edit.php?id=$employee[id]\" class='btn btn-sm btn-info'>Edit</a>
+                        <a href=\"delete.php?id=$employee[id]\" class='btn btn-sm btn-danger' onClick=\"return confirm('Are you sure you want to Remove this person?')\">Delete</a></div></td>";
 
                     }
 
