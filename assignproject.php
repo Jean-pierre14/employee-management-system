@@ -114,10 +114,10 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <table class="table table-sm table-bordered table-hover">
                     <thead>
-                        <tr class="bg-warning">
+                        <tr class="bg-warning text-white">
 
                             <th align="center">Project ID</th>
                             <th align="center">Emp. ID</th>
@@ -141,19 +141,14 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['subdate']."</td>";
 					echo "<td>".$employee['mark']."</td>";
 					echo "<td>".$employee['status']."</td>";
-					echo "<td><a href=\"mark.php?id=$employee[eid]&pid=$employee[pid]\">Mark</a>"; 
+					echo "<td><a href=\"mark.php?id=$employee[eid]&pid=$employee[pid]\" class='shadow-sm button'>Mark</a>"; 
 
 				}
-
-
 			?>
-
                 </table>
             </div>
         </div>
     </div>
-
-
     <footer class="footer-area">
 
         <div class="copyright">

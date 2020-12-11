@@ -112,7 +112,7 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-12 mb-5" style="margin-bottom: 90px;">
+            <div class="col-md-12 mb-5">
                 <div class="table-responsive">
                     <table class="table table-sm table-bordered table-hover">
                         <thead>
@@ -168,7 +168,7 @@ $result = mysqli_query($conn, $sql);
         </div>
     </div>
     </div>
-    <footer class="footer-area">
+    <footer class="footer-area mt-5">
 
         <div class="copyright">
             <div class="container">
