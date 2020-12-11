@@ -52,10 +52,6 @@
     <!-- Vendor CSS-->
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS
-    <link href="css/main.css" rel="stylesheet" media="all"> -->
-
 </head>
 
 <body>
@@ -79,8 +75,6 @@
                                 Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="applyleave.php?id=<?php echo $id?>">Apply
                                 Leave</a></li>
-
-
                         <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
                     </ul>
                 </div>
@@ -95,21 +89,13 @@
             </div>
         </div>
     </div>
-
-    <!--
-	<div class="divider"></div>
-	<div id="divimg">
-	-->
-
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-bordered table-sm table-hover">
                         <thead>
-                            <tr>
-
+                            <tr class="bg-warning text-white">
                                 <th align="center">Project ID</th>
                                 <th align="center">Project Name</th>
                                 <th align="center">Due Date</th>
@@ -132,7 +118,11 @@
                   echo "<td>".$employee['status']."</td>";
                   
 
-                  echo "<td><a href=\"psubmit.php?pid=$employee[pid]&id=$employee[eid]\">Submit</a>";
+                  echo "<td>
+                    <a href=\"psubmit.php?pid=$employee[pid]&id=$employee[eid]\" class='shadow button'>
+                        Submit
+                    </a>
+                    ";
 
                 }?>
                     </table>

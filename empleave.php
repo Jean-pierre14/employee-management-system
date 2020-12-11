@@ -107,19 +107,16 @@ $result = mysqli_query($conn, $sql);
             <div class="col-lg-12">
                 <div class="heading-title text-center" style="margin-top: 80px;">
 
-                    <p>Employees Leave</p>
-                </div>
-                <div class="text-center">
                     <h2>Employees Leave</h2>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12 mb-5" style="margin-bottom: 90px;">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-sm table-bordered table-hover">
                         <thead>
-                            <tr>
+                            <tr class="bg-warning text-white">
                                 <th>Emp. ID</th>
                                 <th>Token</th>
                                 <th>Name</th>
@@ -151,7 +148,14 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$interval->days."</td>";
 					echo "<td>".$employee['reason']."</td>";
 					echo "<td>".$employee['status']."</td>";
-					echo "<td><a href=\"approve.php?id=$employee[id]&token=$employee[token]\"  onClick=\"return confirm('Are you sure you want to Approve the request?')\">Approve</a> | <a href=\"cancel.php?id=$employee[id]&token=$employee[token]\" onClick=\"return confirm('Are you sure you want to Canel the request?')\">Cancel</a></td>";
+                    echo "<td class='btn-group'>
+                        <a href=\"approve.php?id=$employee[id]&token=$employee[token]\" class='btn btn-md btn-info' onClick=\"return confirm('Are you sure you want to Approve the request?')\">
+                            Approve
+                        </a>
+                        <a href=\"cancel.php?id=$employee[id]&token=$employee[token]\"  class='btn btn-md btn-danger' onClick=\"return confirm('Are you sure you want to Canel the request?')\">
+                            Cancel
+                        </a>
+                    </td>";
 
 				}
 
