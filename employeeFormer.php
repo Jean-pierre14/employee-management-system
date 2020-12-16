@@ -3,9 +3,6 @@
 require_once ('process/dbh.php');
 $sql = "SELECT * FROM `employee` WHERE 1";
 
-if (!isset($_SESSION["email"])) {
-  header("location: alogin.html");
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,16 +84,10 @@ if (!isset($_SESSION["email"])) {
                     <p>former Employees</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-9">
-                    <div id="results-a"></div>
-                </div>
-            </div>
         </div>
+        <div id="results-a" class="py-5"></div>
     </div>
-    </div>
-    <!-- <form id = "registration" action="edit.php" method="POST"> -->
-    </div>
+    
     <footer class="footer-area bg-f">
         <div class="copyright">
             <div class="container">

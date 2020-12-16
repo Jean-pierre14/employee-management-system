@@ -155,10 +155,12 @@ $result = mysqli_query($conn, $sql);
                             </div>
                         </div>
                         <div class="col-md-4 p-2">
-                            <div class="box shadow">
+                            <a href="employeeFormer.php">
+                                <div class="box shadow">
                                 <h3>Employee Former</h3>
                                 <span id="total-employees-fe" class="badge badge-danger">23</span>
                             </div>
+                            </a>
                         </div>
                         <div class="col-md-4 p-2">
                             <div class="box shadow">
