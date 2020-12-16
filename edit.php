@@ -141,7 +141,6 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
         <div class="row">
             <div class="col-lg-12">
                 <div class="heading-title text-center" style="margin-top: 80px;">
-
                     <p>Update Info</p>
                 </div>
                 <div class="text-center">
@@ -154,38 +153,47 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
                 <form id="registration" action="edit.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
+                            <label for="Firstname">First name</label>
                             <input class="form-control" type="text" name="firstName" value="<?php echo $firstname;?>">
                         </div>
                         <div class="form-group  col-md-6">
+                            <label for="ls">Last name</label>
                             <input class="form-control" type="text" name="lastName" value="<?php echo $lastname;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="em">Email</label>
                             <input class="form-control" type="email" name="email" value="<?php echo $email;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="dob">Date od birth</label>
                             <input class="form-control" type="text" name="birthday" value="<?php echo $birthday;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="ge">Gender</label>
                             <input class="form-control" type="text" name="gender" value="<?php echo $gender;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="contact">Phone</label>
                             <input class="form-control" type="number" name="contact" value="<?php echo $contact;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="nid">Nid</label>
                             <input class="form-control" type="number" name="nid" value="<?php echo $nid;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="address">Address</label>
                             <input class="form-control" type="text" name="address" value="<?php echo $address;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="dept">Dept</label>
                             <input class="form-control" type="text" name="dept" value="<?php echo $dept;?>">
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="degree">Degree</label>
                             <input class="form-control" type="text" name="degree" value="<?php echo $degree;?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="hidden" name="id" id="textField" value="<?php echo $id;?>"
-                                required="required"><br><br>
+                            <input type="hidden" name="id" id="textField" value="<?php echo $id;?>" required="required">
                         </div>
                         <div class="form-group col-md-12">
                             <button class="btn btn-primary" type="submit" name="update">Update</button>
