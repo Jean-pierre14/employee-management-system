@@ -6,10 +6,23 @@ $(document).ready(function () {
     countFe()
     countPr()
     projects()
+    results()
 })
 
 
 // All
+
+function results() {
+    let action = 'results-a'
+    $.ajax({
+        url: './sniper.php',
+        method: 'post',
+        data: { action },
+        success: function (data) {
+            $('#results-a').html(data)
+        }
+    })
+}
 
 function projects() {
     let action = "projects"

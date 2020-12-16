@@ -84,76 +84,20 @@ if (!isset($_SESSION["email"])) {
         <div class="row">
             <div class="col-lg-12">
                 <div class="heading-title text-center" style="margin-top: 80px;">
-                    <p>Update Info</p>
-                </div>
-                <div class="text-center">
-                    <h2>Update Employee Info</h2>
+                    <p>former Employees</p>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-7 py-5">
-                <form id="registration" action="edit.php" method="POST">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="Firstname">First name</label>
-                            <input class="form-control" type="text" name="firstName" value="<?php echo $firstname;?>">
-                        </div>
-                        <div class="form-group  col-md-6">
-                            <label for="ls">Last name</label>
-                            <input class="form-control" type="text" name="lastName" value="<?php echo $lastname;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="em">Email</label>
-                            <input class="form-control" type="email" name="email" value="<?php echo $email;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="dob">Date od birth</label>
-                            <input class="form-control" type="text" name="birthday" value="<?php echo $birthday;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="ge">Gender</label>
-                            <input class="form-control" type="text" name="gender" value="<?php echo $gender;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="contact">Phone</label>
-                            <input class="form-control" type="number" name="contact" value="<?php echo $contact;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="nid">Nid</label>
-                            <input class="form-control" type="number" name="nid" value="<?php echo $nid;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="address">Address</label>
-                            <input class="form-control" type="text" name="address" value="<?php echo $address;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="dept">Dept</label>
-                            <input class="form-control" type="text" name="dept" value="<?php echo $dept;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="degree">Degree</label>
-                            <input class="form-control" type="text" name="degree" value="<?php echo $degree;?>">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="hidden" name="id" id="textField" value="<?php echo $id;?>" required="required">
-                        </div>
-                        <div class="form-group col-md-12">
-                            <button class="btn btn-primary" type="submit" name="update">Update</button>
-                        </div>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-md-9">
+                    <div id="results-a"></div>
+                </div>
             </div>
-            </form>
         </div>
     </div>
     </div>
     <!-- <form id = "registration" action="edit.php" method="POST"> -->
     </div>
-
-
-
     <footer class="footer-area bg-f">
-
         <div class="copyright">
             <div class="container">
                 <div class="row">
@@ -162,18 +106,14 @@ if (!isset($_SESSION["email"])) {
                                 System</a> Design By :
                             <a href="#">Eloi</a>
                         </p>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </footer>
     <!-- End Footer -->
-
     <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o"
             aria-hidden="true"></i></a>
-
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -186,6 +126,7 @@ if (!isset($_SESSION["email"])) {
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script src="./sniper.js"></script>
 </body>
 
 </html>

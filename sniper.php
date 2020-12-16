@@ -99,4 +99,40 @@
             }
             print $output;
         }
+        if($_POST['action'] == 'results-a'){
+            $sql = mysqli_query($conn, "SELECT * FROM former_employees ORDER BY id DESC");
+            if(@mysqli_num_rows($sql) > 0){
+                $output .= '
+                <table class="table table-sm table-bordered table-striped table-action">
+                    <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Gender</th>
+                            <th>Contact</th>
+                            <th>department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                ';
+                while($row = mysqli_fetch_array($sql)){
+                    $output .= '
+                    <tr>
+                        <td>'.$row['firstName'].'</td>
+                        <td>'.$row['lastName'].'</td>
+                        <td>'.$row['gender'].'</td>
+                        <td>'.$row['contact'].'</td>
+                        <td>'.$row['department'].'</td>
+                    </tr>
+                    ';
+                }
+                $output .= '
+                </tbody>
+                </table>
+                ';
+            }else{
+                $output .= '<p class="alert alert-danger">there no data</p>';
+            }
+            print $output;
+        }
     }
