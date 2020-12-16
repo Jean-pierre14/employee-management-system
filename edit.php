@@ -131,7 +131,6 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
                         <li class="nav-item active"><a class="nav-link" href="aloginwel.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="addemp.php">Add Employee</a></li>
                         <li class="nav-item"><a class="nav-link" href="viewemp.php">View Employee</a></li>
-
                         <li class="nav-item"><a class="nav-link" href="sniper.php?logout">LogOut</a></li>
                     </ul>
                 </div>
