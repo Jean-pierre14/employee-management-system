@@ -17,7 +17,7 @@ if(isset($_GET['id'])){
 			$array[5] = $data['nid'];
 			$array[6] = $data['department'];
 		}
-		$migration = mysqli_query($conn, "INSERT INTO former_employees(id, firstName, lastName, gender, contact, nid, department) VALUES('$array[0]', '$array[1]', '$array[2]' '$array[3]', '$array[4]', '$array[5]', '$array[6]')");
+		$migration = mysqli_query($conn, "INSERT INTO former_employees SET id='$array[0]', firstName='$array[1]', lastName='$array[2]', gender='$array[3]', contact='$array[4]', nid='$array[5]', department='$array[6]'");
 		if($migration){$deleted = mysqli_query($conn, "DELETE FROM employee WHERE id=$id");
 			if($deleted){header('Location: viewemp.php');
 			}else{header('Location: aloginwel.php');}
